@@ -1,0 +1,136 @@
+// styles/profile.scss
+.profile {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f6f8;
+
+  .sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+
+    .user-info {
+      text-align: center;
+      margin-bottom: 20px;
+
+      p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #bdc3c7;
+      }
+
+      button {
+        padding: 10px 20px;
+        background: #e74c3c;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: #c0392b;
+        }
+      }
+
+      a {
+        display: block;
+        margin-top: 10px;
+        color: #1abc9c;
+        text-decoration: none;
+        font-size: 14px;
+
+        &:hover {
+          color: #16a085;
+        }
+      }
+    }
+
+    nav {
+      a {
+        display: block;
+        padding: 10px 15px;
+        color: #bdc3c7;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+
+        &:hover {
+          background: #34495e;
+          color: #fff;
+          transform: scale(1.05);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    flex: 1;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+
+    h1 {
+      font-size: 30px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 20px;
+      background: #ecf0f1;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      p {
+        font-size: 30px;
+        color: #34495e;
+        margin: 0;
+
+        strong {
+          color: #2ecc71;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 20px;
+      margin: 10px;
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .profile-info {
+        padding: 15px;
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
